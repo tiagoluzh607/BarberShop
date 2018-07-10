@@ -6,6 +6,7 @@
 package View;
 
 import Model.Cliente;
+import Model.Pessoa;
 import Model.Servico;
 import Model.Usuario;
 
@@ -34,6 +35,9 @@ public class Main {
         Cliente link = new Cliente(1, "tiago", 'M', "09/05/1996", "92408407", "tiagoluz.h607@gmail.com", "24578874","Rua teste 654 canudos", "95478452");
         System.out.println(link.getNome());
         System.out.println(link.getDataNascimento()); //debugar aqui
+        
+        Pessoa pessoinha = new Pessoa(1, "capirotin");
+        System.out.println(pessoinha.getNome());
         
    }
     
