@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  *
  * @author tiago
  */
-public class Pessoa {
+abstract public class Pessoa {
     
     
     protected int id;
