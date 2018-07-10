@@ -15,46 +15,33 @@ import java.util.logging.Logger;
  * Classe representa um usuario do sistema
  * @author tiago
  */
-public class Usuario {
-    
-    private int id;
-    private String nome;
+public class Usuario extends Pessoa{
+
     private String senha;
     private String nivelAcesso;
-    private char sexo;
-    private Date dataNascimento;
-    private String telefone;
-    private String email;
-    private String rg;
 
-    public Usuario(int id, String nome, String senha, String nivelAcesso, char sexo, String dataNascimento, String telefone, String email, String rg) {
-        this.id = id;
-        this.nome = nome;
+    /**
+     *  Construtor Cmpleto da Classe Usuario
+     * @param id identificador
+     * @param nome
+     * @param sexo
+     * @param dataNascimento
+     * @param telefone
+     * @param email
+     * @param rg
+     * @param senha
+     * @param nivelAcesso é o nível de acesso que a pessoa tem exemplo "Administrador" ou "Funcionario"
+     */
+    public Usuario(int id, String nome, char sexo, String dataNascimento, String telefone, String email, String rg, String senha, String nivelAcesso) {
+        super(id, nome, sexo, dataNascimento, telefone, email, rg);
         this.senha = senha;
         this.nivelAcesso = nivelAcesso;
-        this.sexo = sexo;
-        try {
-            this.dataNascimento = new SimpleDateFormat("dd/MM/yyyy").parse(dataNascimento);
-        } catch (ParseException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        this.telefone = telefone;
-        this.email = email;
-        this.rg = rg;
     }
 
-    public Usuario(int id, String nome, String senha) {
-        this.id = id;
-        this.nome = nome;
+    public Usuario(String senha, String nivelAcesso, int id, String nome) {
+        super(id, nome);
         this.senha = senha;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+        this.nivelAcesso = nivelAcesso;
     }
 
     public String getSenha() {
@@ -71,49 +58,7 @@ public class Usuario {
 
     public void setNivelAcesso(String nivelAcesso) {
         this.nivelAcesso = nivelAcesso;
-    }
-
-    public char getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(char sexo) {
-        this.sexo = sexo;
-    }
-
-    public Date getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
-    }
-    
-    
+    } 
     
     
 }

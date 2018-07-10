@@ -27,12 +27,13 @@ public class Main {
         System.out.println(servico.getValor());
         
         
-        Usuario tiago = new Usuario(1, "tiago", "123456", "administrador", 'M', "09/05/1996", "992408406", "tiagoluz.h6607@gmail.com", "95412547845");
+        Usuario tiago = new Usuario(1, "tiago", 'M', "09/05/1996", "92408407", "tiagoluz.h607@gmail.com", "24578874", "123456", "administrador");
         System.out.println(tiago.getNome());
         System.out.println(tiago.getDataNascimento()); //debugar aqui
         
-        Cliente link = new Cliente(1, "link", 'M', "09/05/1996", "92408407", "zelda@zelda.com", "9254785", "Rua 345 palmeiras, NH", "9330000000");
-        
+        Cliente link = new Cliente(1, "tiago", 'M', "09/05/1996", "92408407", "tiagoluz.h607@gmail.com", "24578874","Rua teste 654 canudos", "95478452");
+        System.out.println(link.getNome());
+        System.out.println(link.getDataNascimento()); //debugar aqui
         
    }
     
