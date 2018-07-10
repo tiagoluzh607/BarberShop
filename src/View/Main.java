@@ -5,6 +5,7 @@
  */
 package View;
 
+import Model.Agendamento;
 import Model.Cliente;
 import Model.Pessoa;
 import Model.Servico;
@@ -22,10 +23,10 @@ public class Main {
         String nome = "tiago";
         System.out.println(nome);
         
-        Servico servico = new Servico(1, "corte", 30);
+        Servico corte = new Servico(1, "corte", 30);
         
-        System.out.println(servico.getDescricao());
-        System.out.println(servico.getValor());
+        System.out.println(corte.getDescricao());
+        System.out.println(corte.getValor());
         
         
         Usuario tiago = new Usuario(1, "tiago", 'M', "09/05/1996", "92408407", "tiagoluz.h607@gmail.com", "24578874", "123456", "administrador");
@@ -36,8 +37,17 @@ public class Main {
         System.out.println(link.getNome());
         System.out.println(link.getDataNascimento()); //debugar aqui
         
-        Pessoa pessoinha = new Pessoa(1, "capirotin");
-        System.out.println(pessoinha.getNome());
+        //Nao consigo estanciar a classe é abstrata
+        //Pessoa pessoinha = new Pessoa(1, "capirotin");
+        //System.out.println(pessoinha.getNome());
+        
+        
+        //--------------------- Criando Um Agendamento -----------------------------------------------------
+        Agendamento agendamento = new Agendamento(1, link, corte, 30, "09/07/2018 23:51");
+        System.out.println(agendamento.getCliente().getNome()); //debugar aqui
+        System.out.println(agendamento.getData());
+        
+        
         
    }
     
