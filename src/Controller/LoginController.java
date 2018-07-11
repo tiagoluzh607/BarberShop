@@ -5,6 +5,8 @@
  */
 package Controller;
 
+import Controller.Helper.LoginHelper;
+import Model.Usuario;
 import View.Login;
 
 /**
@@ -14,14 +16,18 @@ import View.Login;
 public class LoginController {
     
     private Login view;
+    private LoginHelper helper;
 
     public LoginController(Login view) {
         this.view = view;
+        this.helper = new LoginHelper(view);
     }
     
     public void entrarNoSistema(){
     
-        //Pegar Usuario da View
+        //Pegar Usuario da View        
+        Usuario usuarioNaoAutenticado = helper.obterModelo(); //depurar aqui
+        
         //Pesquisa Usuario no Banco
         //Se o usuario da view tiver mesmo usuario e senha que o usuario vindo do banco direcionar para menu principal
         //Senão mostrar uma mensagem ao usuario "Usuario e senha invalidos"

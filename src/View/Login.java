@@ -7,6 +7,8 @@ package View;
 
 import Controller.LoginController;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 /**
  *
@@ -101,7 +103,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_TextUsuarioActionPerformed
 
     private void ButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEntrarActionPerformed
-        controller.FizTendeu();
+        controller.entrarNoSistema();
     }//GEN-LAST:event_ButtonEntrarActionPerformed
 
     private void TextSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextSenhaActionPerformed
@@ -155,6 +157,14 @@ public class Login extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     
+    public JTextField getTextUsuario(){
+        return TextUsuario;
+    }
+    
+    public JPasswordField getTextSenha(){
+        return TextSenha;
+    }
+  
     
     
     
