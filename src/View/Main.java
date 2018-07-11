@@ -7,9 +7,11 @@ package View;
 
 import Model.Agendamento;
 import Model.Cliente;
-import Model.Pessoa;
+import Model.DAO.Banco;
+import Model.DAO.UsuarioDAO;
 import Model.Servico;
 import Model.Usuario;
+import java.util.ArrayList;
 
 /**
  *
@@ -46,6 +48,20 @@ public class Main {
         Agendamento agendamento = new Agendamento(1, link, corte, 30, "09/07/2018 23:51");
         System.out.println(agendamento.getCliente().getNome()); //debugar aqui
         System.out.println(agendamento.getData());
+        
+        
+        Banco.inicia();
+        
+        //Testando DAO
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        usuarioDAO.insert(tiago);
+        ArrayList<Usuario> usuarios = usuarioDAO.selectAll();
+        tiago.setNome("tiago luz");
+        usuarioDAO.update(tiago);
+        usuarios = usuarioDAO.selectAll();
+        usuarioDAO.delete(tiago);
+        usuarios = usuarioDAO.selectAll();
+        
         
         
         
