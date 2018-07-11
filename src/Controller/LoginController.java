@@ -19,6 +19,13 @@ public class LoginController {
         this.view = view;
     }
     
+    public void entrarNoSistema(){
+    
+        //Pegar Usuario da View
+        //Pesquisa Usuario no Banco
+        //Se o usuario da view tiver mesmo usuario e senha que o usuario vindo do banco direcionar para menu principal
+        //Senão mostrar uma mensagem ao usuario "Usuario e senha invalidos"
+    }
     
     public void FizTendeu(){
         
