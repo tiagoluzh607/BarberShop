@@ -5,17 +5,22 @@
  */
 package View;
 
+import Controller.AgendaController;
+
 /**
  *
  * @author tiago
  */
 public class Agenda extends javax.swing.JFrame {
 
+    private final AgendaController controller;
+
     /**
      * Creates new form Agenda
      */
     public Agenda() {
         initComponents();
+        controller = new AgendaController(this);
     }
 
     /**
