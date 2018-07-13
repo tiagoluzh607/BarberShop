@@ -32,6 +32,7 @@ public class Agenda extends javax.swing.JFrame {
     private void iniciar(){
         controller.atualizaTabela();
         controller.atualizaClientes();
+        controller.atualizaServicos();
         layoutTabela();
     }
     
@@ -114,7 +115,6 @@ public class Agenda extends javax.swing.JFrame {
 
         getContentPane().add(JComboBoxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 280, 40));
 
-        JComboBoxServico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Barba", "Barba + Corte", "Corte", " " }));
         getContentPane().add(JComboBoxServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 280, 40));
 
         TextValor.setText("0");

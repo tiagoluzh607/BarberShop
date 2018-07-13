@@ -10,6 +10,8 @@ import Model.Agendamento;
 import Model.Cliente;
 import Model.DAO.AgendamentoDAO;
 import Model.DAO.ClienteDAO;
+import Model.DAO.ServicoDAO;
+import Model.Servico;
 import View.Agenda;
 import java.util.ArrayList;
 
@@ -44,6 +46,16 @@ public class AgendaController {
         
         //Exibir clientes no combobox cliente
         helper.preencherClientes(clientes);
+    }
+    
+    public void atualizaServicos(){
+    
+        //Buscar Servicos do Banco
+        ServicoDAO servicoDAO = new ServicoDAO();
+        ArrayList<Servico> servicos = servicoDAO.selectAll();
+        
+        //Exibir Servicos na combobox Servico
+        helper.preencherServicos(servicos);
     }
     
 }
