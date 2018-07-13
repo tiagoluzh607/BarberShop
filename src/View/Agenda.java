@@ -6,6 +6,7 @@
 package View;
 
 import Controller.AgendaController;
+import java.awt.Dimension;
 import javax.swing.JTable;
 
 /**
@@ -13,6 +14,7 @@ import javax.swing.JTable;
  * @author tiago
  */
 public class Agenda extends javax.swing.JFrame {
+
 
     private final AgendaController controller;
 
@@ -28,6 +30,7 @@ public class Agenda extends javax.swing.JFrame {
     
     private void iniciar(){
         controller.atualizaTabela();
+        layoutTabela();
     }
     
     /**
@@ -156,9 +159,10 @@ public class Agenda extends javax.swing.JFrame {
                 "Id", "Cliente", "Serviço", "Valor", "Data", "Hora", "Observação"
             }
         ));
+        TableAgendamentos.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
         jScrollPane1.setViewportView(TableAgendamentos);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 590, 1120, 330));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 590, 1050, 330));
 
         LabelAgendaPainelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
         getContentPane().add(LabelAgendaPainelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 1000));
@@ -174,7 +178,7 @@ public class Agenda extends javax.swing.JFrame {
     }//GEN-LAST:event_TextIdActionPerformed
 
     private void ButtonAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAgendarActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_ButtonAgendarActionPerformed
 
     private void TextValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextValorActionPerformed
@@ -240,6 +244,17 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 
+    private void layoutTabela() {
+
+        this.TableAgendamentos.getColumnModel().getColumn(0).setPreferredWidth(45);
+        this.TableAgendamentos.getColumnModel().getColumn(1).setPreferredWidth(200);
+        this.TableAgendamentos.getColumnModel().getColumn(2).setPreferredWidth(200);
+        this.TableAgendamentos.getColumnModel().getColumn(3).setPreferredWidth(100);
+        this.TableAgendamentos.getColumnModel().getColumn(4).setPreferredWidth(100);
+        this.TableAgendamentos.getColumnModel().getColumn(5).setPreferredWidth(100);
+        this.TableAgendamentos.getColumnModel().getColumn(6).setPreferredWidth(350);
+    }
+    
     public JTable getTableAgendamentos() {
         return TableAgendamentos;
     }
