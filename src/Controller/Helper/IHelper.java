@@ -5,17 +5,19 @@
  */
 package Controller.Helper;
 
+import static javafx.scene.input.KeyCode.T;
+
+
+
 /**
  *
  * @author tiago
  */
 public interface IHelper {
     
-    Object obterModelo();
-    
-    void setarModelo(Object object);
-    
-    void limparTela();
+    public abstract Object obterModelo();
+        
+    public abstract void limparTela();
     
     
 }
