@@ -5,7 +5,10 @@
  */
 package Controller;
 
+import Model.Agendamento;
+import Model.DAO.AgendamentoDAO;
 import View.Agenda;
+import java.util.ArrayList;
 
 /**
  *
@@ -23,6 +26,9 @@ public class AgendaController {
     public void atualizaTabela(){
     
         //Buscar Lista com agendamentos do banco de dados
+        AgendamentoDAO agendamentoDAO = new AgendamentoDAO();
+        ArrayList<Agendamento> agendamentos = agendamentoDAO.selectAll();//depurar aqui
+        
         //Exibir essa lista na view
     }
     
