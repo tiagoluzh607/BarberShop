@@ -6,6 +6,7 @@
 package View;
 
 import Controller.AgendaController;
+import javax.swing.JTable;
 
 /**
  *
@@ -157,7 +158,7 @@ public class Agenda extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TableAgendamentos);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 590, 1120, 330));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 590, 1120, 330));
 
         LabelAgendaPainelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
         getContentPane().add(LabelAgendaPainelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 1000));
@@ -238,4 +239,20 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
+
+    public JTable getTableAgendamentos() {
+        return TableAgendamentos;
+    }
+
+    public void setTableAgendamentos(JTable TableAgendamentos) {
+        this.TableAgendamentos = TableAgendamentos;
+    }
+
+
+    
+
+
+
+
+
 }
