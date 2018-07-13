@@ -20,6 +20,10 @@ public class AgendaController {
         
     }
     
+    public void atualizaTabela(){
     
+        //Buscar Lista com agendamentos do banco de dados
+        //Exibir essa lista na view
+    }
     
 }
