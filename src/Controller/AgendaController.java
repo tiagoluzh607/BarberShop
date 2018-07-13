@@ -43,6 +43,7 @@ public class AgendaController {
         ArrayList<Cliente> clientes = clienteDAO.selectAll();
         
         //Exibir clientes no combobox cliente
+        helper.preencherClientes(clientes);
     }
     
 }

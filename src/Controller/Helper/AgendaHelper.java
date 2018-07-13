@@ -6,8 +6,10 @@
 package Controller.Helper;
 
 import Model.Agendamento;
+import Model.Cliente;
 import View.Agenda;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -43,9 +45,17 @@ public class AgendaHelper {
                 agendamento.getObservacao()
             });
             
-        }
+        }        
         
+    }
+    
+    public void preencherClientes(ArrayList<Cliente> clientes){
         
+        DefaultComboBoxModel comboBoxmodel = (DefaultComboBoxModel) view.getJComboBoxCliente().getModel();
+        
+        for (Cliente cliente : clientes) {
+            comboBoxmodel.addElement(cliente); //aqui esta a sacada adicionar cliente e nao cliente getnome()          
+        }  
     }
     
 }

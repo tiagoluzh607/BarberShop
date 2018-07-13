@@ -7,6 +7,7 @@ package View;
 
 import Controller.AgendaController;
 import java.awt.Dimension;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 
 /**
@@ -52,8 +53,8 @@ public class Agenda extends javax.swing.JFrame {
         LabelHora = new javax.swing.JLabel();
         LabelObservacao = new javax.swing.JLabel();
         TextId = new javax.swing.JTextField();
-        TextCliente = new javax.swing.JComboBox<>();
-        TextServico = new javax.swing.JComboBox<>();
+        JComboBoxCliente = new javax.swing.JComboBox<>();
+        JComboBoxServico = new javax.swing.JComboBox<>();
         TextValor = new javax.swing.JTextField();
         TextFormatedData = new javax.swing.JFormattedTextField();
         TextFormatedHora = new javax.swing.JFormattedTextField();
@@ -111,11 +112,10 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(TextId, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 280, 40));
 
-        TextCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alan", "Afonso", "Abigail", "Alexandro" }));
-        getContentPane().add(TextCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 280, 40));
+        getContentPane().add(JComboBoxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 280, 40));
 
-        TextServico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Barba", "Barba + Corte", "Corte", " " }));
-        getContentPane().add(TextServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 280, 40));
+        JComboBoxServico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Barba", "Barba + Corte", "Corte", " " }));
+        getContentPane().add(JComboBoxServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 280, 40));
 
         TextValor.setText("0");
         TextValor.setToolTipText("");
@@ -179,7 +179,7 @@ public class Agenda extends javax.swing.JFrame {
     }//GEN-LAST:event_TextIdActionPerformed
 
     private void ButtonAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAgendarActionPerformed
-
+        
     }//GEN-LAST:event_ButtonAgendarActionPerformed
 
     private void TextValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextValorActionPerformed
@@ -223,6 +223,8 @@ public class Agenda extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonAgendar;
+    private javax.swing.JComboBox<String> JComboBoxCliente;
+    private javax.swing.JComboBox<String> JComboBoxServico;
     private javax.swing.JLabel LabelAgenda;
     private javax.swing.JLabel LabelAgendaFundo;
     private javax.swing.JLabel LabelAgendaPainelFundo;
@@ -234,12 +236,10 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JLabel LabelServico;
     private javax.swing.JLabel LabelValor;
     private javax.swing.JTable TableAgendamentos;
-    private javax.swing.JComboBox<String> TextCliente;
     private javax.swing.JFormattedTextField TextFormatedData;
     private javax.swing.JFormattedTextField TextFormatedHora;
     private javax.swing.JTextField TextId;
     private javax.swing.JTextArea TextObservacao;
-    private javax.swing.JComboBox<String> TextServico;
     private javax.swing.JTextField TextValor;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -264,7 +264,23 @@ public class Agenda extends javax.swing.JFrame {
         this.TableAgendamentos = TableAgendamentos;
     }
 
+    public JComboBox<String> getJComboBoxCliente() {
+        return JComboBoxCliente;
+    }
 
+    public void setJComboBoxCliente(JComboBox<String> JComboBoxCliente) {
+        this.JComboBoxCliente = JComboBoxCliente;
+    }
+
+    public JComboBox<String> getJComboBoxServico() {
+        return JComboBoxServico;
+    }
+
+    public void setJComboBoxServico(JComboBox<String> JComboBoxServico) {
+        this.JComboBoxServico = JComboBoxServico;
+    }
+
+    
     
 
 
