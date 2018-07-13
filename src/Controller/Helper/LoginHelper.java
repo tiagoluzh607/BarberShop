@@ -12,7 +12,7 @@ import View.Login;
  *
  * @author tiago
  */
-public class LoginHelper {
+public class LoginHelper implements IHelper{
 
     private final Login view;
 
@@ -20,6 +20,7 @@ public class LoginHelper {
         this.view = view;
     }
     
+    @Override
     public Usuario obterModelo(){
         
         String nome = view.getTextUsuario().getText();
@@ -37,9 +38,11 @@ public class LoginHelper {
         view.getTextSenha().setText(senha);
     }
     
+    @Override
     public void limparTela(){
         view.getTextUsuario().setText("");
         view.getTextSenha().setText("");
     }
+
     
 }
