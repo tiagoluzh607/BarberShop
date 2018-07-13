@@ -185,7 +185,7 @@ public class Agenda extends javax.swing.JFrame {
     }//GEN-LAST:event_TextIdActionPerformed
 
     private void ButtonAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAgendarActionPerformed
-        
+        controller.agendar();
     }//GEN-LAST:event_ButtonAgendarActionPerformed
 
     private void TextValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextValorActionPerformed
