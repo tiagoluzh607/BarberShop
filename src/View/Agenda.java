@@ -30,6 +30,7 @@ public class Agenda extends javax.swing.JFrame {
     
     private void iniciar(){
         controller.atualizaTabela();
+        controller.atualizaClientes();
         layoutTabela();
     }
     

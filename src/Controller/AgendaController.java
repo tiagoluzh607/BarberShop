@@ -7,7 +7,9 @@ package Controller;
 
 import Controller.Helper.AgendaHelper;
 import Model.Agendamento;
+import Model.Cliente;
 import Model.DAO.AgendamentoDAO;
+import Model.DAO.ClienteDAO;
 import View.Agenda;
 import java.util.ArrayList;
 
@@ -33,6 +35,14 @@ public class AgendaController {
         
         //Exibir essa lista na view
         helper.preencherTabela(agendamentos);
+    }
+    
+    public void atualizaClientes(){
+        //Buscar Clientes do banco
+        ClienteDAO clienteDAO = new ClienteDAO();
+        ArrayList<Cliente> clientes = clienteDAO.selectAll();
+        
+        //Exibir clientes no combobox cliente
     }
     
 }
