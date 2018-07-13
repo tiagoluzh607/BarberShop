@@ -66,6 +66,7 @@ public class AgendaController {
     public void agendar() {
         //Buscar Objeto Agendamento da Tela
         //Salvar no banco de dados
+        //atualizar Tabela
     }
     
 }
