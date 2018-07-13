@@ -72,6 +72,10 @@ public class AgendaHelper implements IHelper{
     public Servico obterServico() {
         return (Servico) view.getJComboBoxServico().getSelectedItem();
     }
+    
+    public Cliente obterCliente(){
+        return (Cliente) view.getJComboBoxCliente().getSelectedItem();
+    }
 
     public void setarValor(float valor) {
         view.getTextValor().setText(valor+"");
@@ -80,12 +84,29 @@ public class AgendaHelper implements IHelper{
     
     @Override
     public Agendamento obterModelo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        String idString = view.getTextId().getText();
+        int id = Integer.parseInt(idString);
+        Cliente cliente = obterCliente();
+        Servico servico = obterServico();
+        String valorString = view.getTextValor().getText();
+        float valor = Float.parseFloat(valorString);
+        String data = view.getTextFormatedData().getText();
+        String hora = view.getTextFormatedHora().getText();
+        String dataHora = data + " " + hora;
+        String observacao = view.getTextObservacao().getText();
+        
+        Agendamento agendamento = new Agendamento(id, cliente, servico, valor, dataHora, observacao);
+        return agendamento;
+        
     }
 
     @Override
     public void limparTela() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        view.getTextId().setText("0");
+        view.getTextFormatedData().setText("");
+        view.getTextFormatedHora().setText("");
+        view.getTextObservacao().setText("");
     }
 
     
