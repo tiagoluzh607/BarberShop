@@ -19,7 +19,13 @@ public class AgendamentoDAO {
      * @param agendamento exige que seja passado um objeto do tipo agendamento
      */
     public void insert(Agendamento agendamento){
-        Banco.agendamento.add(agendamento);
+          
+        if(agendamento.getId() == 0){
+            agendamento.setId(proximoId());
+            Banco.agendamento.add(agendamento);
+        }
+        
+        
     }
     
     /**
@@ -72,5 +78,20 @@ public class AgendamentoDAO {
         return agendamento.getId() ==  agendamentoAComparar.getId();
     }
     
+    private int proximoId(){
+        
+        int maiorId = 0;
+        
+        for (Agendamento agendamento : Banco.agendamento) {           
+           int id = agendamento.getId();
+            
+            if(maiorId < id){
+                maiorId = id;
+            }
+            
+        }
+        
+        return maiorId + 1;
+    }
     
 }
