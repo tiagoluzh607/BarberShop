@@ -20,7 +20,7 @@ public class Correio {
         
         //Usando Classe Email para fazer os envios
         Email email = new Email("Agandamento BarberShop",emailFormatado,destinatario);
-        
+        email.enviar();
         
     }
 

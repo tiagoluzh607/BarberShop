@@ -12,6 +12,7 @@ import Model.DAO.AgendamentoDAO;
 import Model.DAO.ClienteDAO;
 import Model.DAO.ServicoDAO;
 import Model.Servico;
+import Service.Correio;
 import View.Agenda;
 import java.util.ArrayList;
 
@@ -76,6 +77,10 @@ public class AgendaController {
         atualizaTabela();
         
         helper.limparTela();
+       
+        //notifica cliente por email
+        Correio correio = new Correio();
+        correio.NotificarPorEmail(agendamento);
     }
     
 }
